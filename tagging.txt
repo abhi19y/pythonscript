@@ -1,0 +1,13 @@
+PUT /ObjectName?tagging HTTP/1.1
+Host: BucketName.s3.amazonaws.com
+Date: date
+Authorization: authorization string (see Authenticating Requests (AWS Signature Version
+		4))
+<Tagging>
+  <TagSet>
+     <Tag>
+       <Key>Tag Name</Key>
+       <Value>Tag Value</Value>
+     </Tag>
+  </TagSet>
+</Tagging>
