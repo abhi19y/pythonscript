@@ -21,7 +21,7 @@ region = RegionInfo(name=ec2_region_name, endpoint=ec2_region_endpoint)
 
 conn = EC2Connection(aws_access_key,aws_secret_key,region=region)
 
-ebsAllSnapshots=conn.get_all_snapshots(owner='self',filters={'volume_id':'vol-09685e13352922f01'})
+ebsAllSnapshots=conn.get_all_snapshots(owner='self',filters={'volume_id':'vol_id'})
 
 timeLimit=datetime.datetime.now() - datetime.timedelta(days = 20)  
 
