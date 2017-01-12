@@ -30,7 +30,7 @@ for snapshot in ebsAllSnapshots:
     
     if parser.parse(snapshot.start_time).date() <= timeLimit.date():
         print " Deleting Snapshot %s  %s "  %(snapshot.id,snapshot.tags)
-       # conn.delete_snapshot(snapshot.id) 
+        conn.delete_snapshot(snapshot.id) 
 	# Setup logging
 	logging.basicConfig(filename=config['log_file'], level=logging.INFO)
 	start_message = 'Started deleting %(period)s snapshots at %(date)s' % {
